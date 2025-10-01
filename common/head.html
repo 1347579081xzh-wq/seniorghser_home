@@ -1,0 +1,30 @@
+<!-- 字体和预加载 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  /* 全局字体优化 */
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+</style>
+
+
+<style>
+  :root {
+    --sg-accent: #5b8cff;
+    --sg-bg1: #0f1222;
+    --sg-bg2: #151936;
+    --sg-card: rgba(255,255,255,0.06);
+    --sg-card-border: rgba(255,255,255,0.12);
+    --sg-text: #e8ebff;
+    --sg-muted: #a8b0d9;
+  }
+
+  /* 全局降级：若用户不喜欢动态效果，则禁用动画与粒子层 */
+  @media (prefers-reduced-motion: reduce) {
+    .sg-home .sg-anim, .sg-home #sg-effect-canvas { display: none !important; }
+    .sg-home { background: var(--sg-bg1) !important; }
+  }
+</style>
